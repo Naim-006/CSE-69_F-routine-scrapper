@@ -23,7 +23,7 @@ const CourseInfo: React.FC<CourseInfoProps> = ({ metadata, classes }) => {
     <div className="mb-6 relative">
       <div className="overflow-hidden rounded-2xl bg-[#0f172a] border border-slate-800 shadow-xl transition-all duration-300">
         <div className="w-full flex items-center justify-between p-4 bg-slate-900/40">
-          <button 
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="flex items-center gap-3 text-slate-200 hover:text-white transition-colors flex-1"
           >
@@ -32,8 +32,8 @@ const CourseInfo: React.FC<CourseInfoProps> = ({ metadata, classes }) => {
             </div>
             <span className="text-sm font-bold tracking-tight">Enrolled Courses</span>
           </button>
-          
-          <button 
+
+          <button
             onClick={(e) => {
               e.stopPropagation();
               setShowCRInfo(true);
@@ -93,36 +93,36 @@ const CourseInfo: React.FC<CourseInfoProps> = ({ metadata, classes }) => {
       {/* CR Info Modal */}
       {showCRInfo && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-in fade-in duration-300">
-          <div 
-            className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" 
+          <div
+            className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"
             onClick={() => setShowCRInfo(false)}
           />
           <div className="relative w-full max-w-sm bg-[#0f172a] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300">
             {/* Header / Background Pattern */}
             <div className="h-24 bg-gradient-to-br from-brand to-brand-dark relative">
-               <button 
+              <button
                 onClick={() => setShowCRInfo(false)}
                 className="absolute top-4 right-4 p-2 bg-black/20 hover:bg-black/40 text-white rounded-xl transition-colors"
-               >
-                 <X size={18} />
-               </button>
+              >
+                <X size={18} />
+              </button>
             </div>
-            
+
             {/* Profile Section */}
             <div className="px-6 pb-8 -mt-12 text-center">
               <div className="inline-block p-1.5 bg-[#0f172a] rounded-full mb-4">
-                <img 
-                  src={CR_DATA.photo} 
+                <img
+                  src={CR_DATA.photo}
                   alt={CR_DATA.name}
                   className="w-20 h-20 rounded-full bg-slate-800 object-cover"
                 />
               </div>
               <h3 className="text-xl font-black text-white">{CR_DATA.name}</h3>
-              <p className="text-brand text-xs font-black uppercase tracking-[0.2em] mt-1">Section Coordinator</p>
+              <p className="text-brand text-xs font-black uppercase tracking-[0.2em] mt-1">Class Representative</p>
               <p className="text-slate-500 text-[11px] mt-1 font-bold">ID: {CR_DATA.id}</p>
 
               <div className="grid grid-cols-3 gap-3 mt-8">
-                <a 
+                <a
                   href={`tel:${CR_DATA.phone}`}
                   className="flex flex-col items-center gap-2 p-3 bg-slate-900/50 rounded-2xl border border-slate-800 hover:border-brand/40 transition-all group"
                 >
@@ -131,7 +131,7 @@ const CourseInfo: React.FC<CourseInfoProps> = ({ metadata, classes }) => {
                   </div>
                   <span className="text-[10px] font-bold text-slate-400">Call</span>
                 </a>
-                <a 
+                <a
                   href={CR_DATA.whatsapp}
                   target="_blank"
                   rel="noreferrer"
@@ -142,7 +142,7 @@ const CourseInfo: React.FC<CourseInfoProps> = ({ metadata, classes }) => {
                   </div>
                   <span className="text-[10px] font-bold text-slate-400">WhatsApp</span>
                 </a>
-                <a 
+                <a
                   href={`mailto:${CR_DATA.email}`}
                   className="flex flex-col items-center gap-2 p-3 bg-slate-900/50 rounded-2xl border border-slate-800 hover:border-brand-light/40 transition-all group"
                 >

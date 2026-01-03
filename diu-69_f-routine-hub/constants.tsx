@@ -11,38 +11,38 @@ export const METADATA: RoutineMetadata = {
 };
 
 export const CR_DATA: CRInfo = {
-  name: "Sakib Ahmed",
-  id: "221-15-XXXX",
+  name: "Not yet assigned",
+  id: "252-15-XXXX",
   phone: "+880 1700-000000",
-  email: "sakib.cse@diu.edu.bd",
+  email: "",
   photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sakib",
   whatsapp: "https://wa.me/8801700000000"
 };
 
 export const TEACHERS: Teacher[] = [
-  { 
-    id: '1', 
-    name: 'A.A. Rahman', 
-    initial: 'AAR', 
-    photo: 'https://i.pravatar.cc/150?u=aar', 
+  {
+    id: '1',
+    name: 'A.A. Rahman',
+    initial: 'AAR',
+    photo: 'https://i.pravatar.cc/150?u=aar',
     isActive: true,
     designation: 'Assistant Professor',
     email: 'aar@diu.edu.bd'
   },
-  { 
-    id: '2', 
-    name: 'R.K. Roy', 
-    initial: 'RKR', 
-    photo: 'https://i.pravatar.cc/150?u=rkr', 
+  {
+    id: '2',
+    name: 'R.K. Roy',
+    initial: 'RKR',
+    photo: 'https://i.pravatar.cc/150?u=rkr',
     isActive: true,
     designation: 'Lecturer',
     email: 'rkr@diu.edu.bd'
   },
-  { 
-    id: '3', 
-    name: 'E.H. Limon', 
-    initial: 'EHL', 
-    photo: 'https://i.pravatar.cc/150?u=ehl', 
+  {
+    id: '3',
+    name: 'E.H. Limon',
+    initial: 'EHL',
+    photo: 'https://i.pravatar.cc/150?u=ehl',
     isActive: true,
     designation: 'Senior Lecturer',
     email: 'ehl@diu.edu.bd'

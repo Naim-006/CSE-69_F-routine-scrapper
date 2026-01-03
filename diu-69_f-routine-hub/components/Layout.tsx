@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { 
+import {
   Sun,
   Moon,
   Home,
@@ -47,21 +47,20 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, setActiveView, th
 
   return (
     <div className="flex flex-col min-h-screen">
-      
+
       {/* Header */}
-      <header 
-        className={`sticky top-0 z-50 transition-all duration-300 px-6 py-4 flex items-center justify-between ${
-          scrolled 
-            ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800' 
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 px-6 py-4 flex items-center justify-between ${scrolled
+            ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white shadow-lg shadow-brand/20">
             <LayoutGrid size={18} />
           </div>
           <div>
-            <h1 className="text-sm font-bold tracking-tight text-slate-900 dark:text-white">DIU Hub</h1>
+            <h1 className="text-sm font-bold tracking-tight text-slate-900 dark:text-white">DIU Routine</h1>
             <p className="text-[10px] text-slate-500 font-medium flex items-center gap-1.5">
               Section 69_F
               {!isOnline && (
@@ -73,7 +72,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, setActiveView, th
           </div>
         </div>
 
-        <button 
+        <button
           onClick={toggleTheme}
           className="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-colors"
         >
@@ -89,12 +88,11 @@ const Layout: React.FC<LayoutProps> = ({ children, activeView, setActiveView, th
       {/* Mobile Tab Bar */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 px-6 pb-6 pt-3 flex items-center justify-around z-40 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] dark:shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
         {navItems.map(item => (
-          <button 
+          <button
             key={item.id}
             onClick={() => setActiveView(item.id as any)}
-            className={`flex flex-col items-center gap-1 transition-all ${
-              activeView === item.id ? 'text-brand' : 'text-slate-400 dark:text-slate-500'
-            }`}
+            className={`flex flex-col items-center gap-1 transition-all ${activeView === item.id ? 'text-brand' : 'text-slate-400 dark:text-slate-500'
+              }`}
           >
             <item.icon size={22} strokeWidth={activeView === item.id ? 2.5 : 2} />
             <span className="text-[10px] font-bold">{item.label}</span>
