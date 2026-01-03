@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DIU 69_F Routine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#6366f1',
+              DEFAULT: '#4f46e5',
+              dark: '#4338ca'
+            },
+            slate: {
+              950: '#020617',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          animation: {
+            'loop-scroll': 'loop-scroll 50s linear infinite',
+            'subtle-pulse': 'subtle-pulse 3s ease-in-out infinite',
+            'border-flow': 'border-flow 4s linear infinite',
+          },
+          keyframes: {
+            'subtle-pulse': {
+              '0%, 100%': { opacity: 0.6, transform: 'scale(1)' },
+              '50%': { opacity: 1, transform: 'scale(1.02)' },
+            },
+            'border-flow': {
+              '0%': { 'border-color': 'rgba(79, 70, 229, 0.2)' },
+              '50%': { 'border-color': 'rgba(245, 158, 11, 0.5)' },
+              '100%': { 'border-color': 'rgba(79, 70, 229, 0.2)' },
+            }
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: #ffffff;
+      transition: background-color 0.3s ease;
+    }
+
+    .dark body {
+      background-color: #020617;
+    }
+
+    /* Subtle Pro Background */
+    .pro-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .aurora {
+      position: absolute;
+      width: 140%;
+      height: 140%;
+      top: -20%;
+      left: -20%;
+      background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.05) 0%, transparent 50%);
+      filter: blur(80px);
+      animation: aurora-flow 20s infinite alternate ease-in-out;
+    }
+
+    .dark .aurora {
+      background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 50%);
+    }
+
+    @keyframes aurora-flow {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(5%, 10%) rotate(5deg); }
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card-shadow {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .card-shadow {
+      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Interval Loop Animation */
+    .interval-highlight {
+      position: relative;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 10px,
+        rgba(79, 70, 229, 0.03) 10px,
+        rgba(79, 70, 229, 0.03) 20px
+      );
+      animation: interval-slide 20s linear infinite;
+    }
+
+    @keyframes interval-slide {
+      from { background-position: 0 0; }
+      to { background-position: 40px 0; }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.89.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="antialiased selection:bg-brand selection:text-white dark:text-slate-300 text-slate-900">
+  <div class="pro-bg">
+    <div class="aurora"></div>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
