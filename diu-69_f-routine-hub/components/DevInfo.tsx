@@ -20,13 +20,13 @@ const DevInfo: React.FC = () => {
         <div className="glass rounded-3xl p-8 border dark:border-slate-800 space-y-6">
           <div className="flex items-center gap-6">
             <img
-              src="https://ibb.co.com/84scTwRy"
+              src="me.jpg"
               alt="Developer"
               className="w-24 h-24 rounded-2xl object-cover shadow-xl border-4 border-white dark:border-slate-700"
             />
             <div>
               <h3 className="text-2xl font-bold">Naim Hossain</h3>
-              <p className="text-indigo-600 dark:text-indigo-400 font-medium">Founder : NextByte iT</p>
+              <p className="text-indigo-600 dark:text-indigo-400 font-medium">Founder : <a href="https://nextbyte-it.netlify.app/about#team" target="_blank" rel="noopener noreferrer">NextByte iT</a></p>
               <div className="flex gap-3 mt-3">
                 <a href="https://github.com/Naim-006" className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:text-indigo-600 transition-colors"><Github size={18} /></a>
                 <a href="https://www.linkedin.com/in/naim-hossain-973a9432a/" className="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:text-indigo-600 transition-colors"><Linkedin size={18} /></a>
