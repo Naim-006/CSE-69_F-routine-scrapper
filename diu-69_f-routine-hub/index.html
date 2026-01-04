@@ -1,14 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d6efd">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>DIU 69_F Routine</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "uw2dpez7vq");
+</script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -85,8 +97,13 @@
     }
 
     @keyframes aurora-flow {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(5%, 10%) rotate(5deg); }
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(5%, 10%) rotate(5deg);
+      }
     }
 
     .scrollbar-hide::-webkit-scrollbar {
@@ -104,22 +121,25 @@
     /* Interval Loop Animation */
     .interval-highlight {
       position: relative;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 10px,
-        rgba(79, 70, 229, 0.03) 10px,
-        rgba(79, 70, 229, 0.03) 20px
-      );
+      background: repeating-linear-gradient(-45deg,
+          transparent,
+          transparent 10px,
+          rgba(79, 70, 229, 0.03) 10px,
+          rgba(79, 70, 229, 0.03) 20px);
       animation: interval-slide 20s linear infinite;
     }
 
     @keyframes interval-slide {
-      from { background-position: 0 0; }
-      to { background-position: 40px 0; }
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 40px 0;
+      }
     }
   </style>
-<script type="importmap">
+  <script type="importmap">
 {
   "imports": {
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
@@ -131,13 +151,26 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
+
 <body class="antialiased selection:bg-brand selection:text-white dark:text-slate-300 text-slate-900">
   <div class="pro-bg">
     <div class="aurora"></div>
   </div>
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.log('SW failed:', err));
+      });
+    }
+  </script>
+
 </body>
+
 </html>
